@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="DocumentDBDataService.ActiDataService" CodeBehind="ActiDataService.svc.cs" %>

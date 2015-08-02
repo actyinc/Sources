@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Droid3</string>
+
+    <string name="title_section1">Home</string>
+    <string name="title_section2">Campaigns</string>
+    <string name="title_section3">Events</string>
+    <string name="title_section4">Search</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

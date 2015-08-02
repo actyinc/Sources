@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c7bbccc3-10e0-4f95-9094-dae2b0810673" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:62584/ActiDataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ActiDataService.xsd" MetadataType="Schema" ID="50807be4-4f62-4e73-935f-aafc52015e6d" SourceId="1" SourceUrl="http://localhost:62584/ActiDataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ActiDataService.disco" MetadataType="Disco" ID="8e544006-187b-4be6-af2e-8a415fbf9a2e" SourceId="1" SourceUrl="http://localhost:62584/ActiDataService.svc?disco" />
+    <MetadataFile FileName="ActiDataService1.xsd" MetadataType="Schema" ID="5146c437-6e57-4460-b779-9956145a6f17" SourceId="1" SourceUrl="http://localhost:62584/ActiDataService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ActiDataService.wsdl" MetadataType="Wsdl" ID="9ddf7c58-90fe-424e-bea2-84eff3100af4" SourceId="1" SourceUrl="http://localhost:62584/ActiDataService.svc?wsdl" />
+    <MetadataFile FileName="ActiDataService2.xsd" MetadataType="Schema" ID="ac8ac2ec-fbf8-4f52-be14-87cb869ce290" SourceId="1" SourceUrl="http://localhost:62584/ActiDataService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ActiDataService3.xsd" MetadataType="Schema" ID="68722315-f2f8-4a8f-b669-2f3e2f19aadc" SourceId="1" SourceUrl="http://localhost:62584/ActiDataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ActiDataService4.xsd" MetadataType="Schema" ID="43e8da37-c4c8-4dbb-b4a1-60fd9b979d8b" SourceId="1" SourceUrl="http://localhost:62584/ActiDataService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

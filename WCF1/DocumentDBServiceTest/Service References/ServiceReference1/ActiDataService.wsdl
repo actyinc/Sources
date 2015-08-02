@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ActiDataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62584/ActiDataService.svc?xsd=xsd1" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62584/ActiDataService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost:62584/ActiDataService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:62584/ActiDataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DocumentDBDataService" />
+      <xsd:import schemaLocation="http://localhost:62584/ActiDataService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IActiDataService_CreateUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_CreateUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_IsUserNameAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserNameAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_IsUserNameAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserNameAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_UpdateUserPicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPicture" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_UpdateUserPicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_RemoveUserPreference_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserPreference" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_RemoveUserPreference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserPreferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_AddUserPreference_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserPreference" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_AddUserPreference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserPreferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_CreateCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCampaign" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_CreateCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetCampaignsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCampaignsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetCampaignsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCampaignsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetTopFeedsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopFeedsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetTopFeedsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopFeedsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_AddComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddComment" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_AddComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_DeleteComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteComment" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_DeleteComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_AddEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEvent" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_AddEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_UpdateEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEvent" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_UpdateEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_DeleteEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEvent" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_DeleteEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetEventsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetEventsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetEventsForCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsForCampaign" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetEventsForCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsForCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetCommentsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetCommentsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetCommentsForCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsForCampaign" />
+  </wsdl:message>
+  <wsdl:message name="IActiDataService_GetCommentsForCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsForCampaignResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IActiDataService">
+    <wsdl:operation name="CreateUserProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/CreateUserProfile" message="tns:IActiDataService_CreateUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/CreateUserProfileResponse" message="tns:IActiDataService_CreateUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserNameAvailable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/IsUserNameAvailable" message="tns:IActiDataService_IsUserNameAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/IsUserNameAvailableResponse" message="tns:IActiDataService_IsUserNameAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/UpdateUserPicture" message="tns:IActiDataService_UpdateUserPicture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/UpdateUserPictureResponse" message="tns:IActiDataService_UpdateUserPicture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserPreference">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/RemoveUserPreference" message="tns:IActiDataService_RemoveUserPreference_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/RemoveUserPreferenceResponse" message="tns:IActiDataService_RemoveUserPreference_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserPreference">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/AddUserPreference" message="tns:IActiDataService_AddUserPreference_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/AddUserPreferenceResponse" message="tns:IActiDataService_AddUserPreference_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/CreateCampaign" message="tns:IActiDataService_CreateCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/CreateCampaignResponse" message="tns:IActiDataService_CreateCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/GetUser" message="tns:IActiDataService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/GetUserResponse" message="tns:IActiDataService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/GetCampaignsForUser" message="tns:IActiDataService_GetCampaignsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/GetCampaignsForUserResponse" message="tns:IActiDataService_GetCampaignsForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopFeedsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/GetTopFeedsForUser" message="tns:IActiDataService_GetTopFeedsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/GetTopFeedsForUserResponse" message="tns:IActiDataService_GetTopFeedsForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/AddComment" message="tns:IActiDataService_AddComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/AddCommentResponse" message="tns:IActiDataService_AddComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/DeleteComment" message="tns:IActiDataService_DeleteComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/DeleteCommentResponse" message="tns:IActiDataService_DeleteComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/AddEvent" message="tns:IActiDataService_AddEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/AddEventResponse" message="tns:IActiDataService_AddEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/UpdateEvent" message="tns:IActiDataService_UpdateEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/UpdateEventResponse" message="tns:IActiDataService_UpdateEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/DeleteEvent" message="tns:IActiDataService_DeleteEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/DeleteEventResponse" message="tns:IActiDataService_DeleteEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/GetEventsForUser" message="tns:IActiDataService_GetEventsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/GetEventsForUserResponse" message="tns:IActiDataService_GetEventsForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsForCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/GetEventsForCampaign" message="tns:IActiDataService_GetEventsForCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/GetEventsForCampaignResponse" message="tns:IActiDataService_GetEventsForCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/GetCommentsForUser" message="tns:IActiDataService_GetCommentsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/GetCommentsForUserResponse" message="tns:IActiDataService_GetCommentsForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsForCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/IActiDataService/GetCommentsForCampaign" message="tns:IActiDataService_GetCommentsForCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IActiDataService/GetCommentsForCampaignResponse" message="tns:IActiDataService_GetCommentsForCampaign_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ActiDataService" />
+</wsdl:definitions>
