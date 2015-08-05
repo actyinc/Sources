@@ -49,6 +49,7 @@ namespace DocumentDBServiceTest
                 KeyWords = new string[3] {"Political","Capitalism","Democracy"},
                 Message = "Here I explain why they fail us and what we can do to achieve that ideal society.",
                 Status = CampaignStatus.Active.ToString(),
+                MinAge = 4,
             };
 
             TestCampaignMedia cm = new TestCampaignMedia() { UserId = dbUser.id };
@@ -71,6 +72,7 @@ namespace DocumentDBServiceTest
             postParameters.Add("ZipCode", story.ZipCode);
             postParameters.Add("Country", story.Country);
             postParameters.Add("Keywords", string.Join(",", story.KeyWords));
+            postParameters.Add("MinAge", story.MinAge);
             postParameters.Add("FileName", cm.FileName);
             postParameters.Add("ContentType", cm.ContentType);
             postParameters.Add("ContentLength", cm.ContentLength);

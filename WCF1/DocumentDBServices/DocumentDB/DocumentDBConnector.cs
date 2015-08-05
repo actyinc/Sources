@@ -273,7 +273,10 @@ namespace DocumentDBDataService.DocumentDB
                 KeyWords = campaign.KeyWords,
                 Message = campaign.Message,
                 OwnerId = campaign.OwnerId,
-                StoryMediaResourceBlob = uniqueFileName
+                StoryMediaResourceBlob = uniqueFileName,
+                MinAge = campaign.MinAge,
+                ContentName = campaign.ContentName,
+                ContentType = campaign.ContentType
             };
 
             var createdStory = await Client.CreateDocumentAsync(CampaignCollection.DocumentsLink, dbStory);

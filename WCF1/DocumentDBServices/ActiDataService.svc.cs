@@ -105,6 +105,9 @@ namespace DocumentDBDataService
                     Heading = parser.Parameters[Constants.HeadingKey].Data,
                     ZipCode = parser.Parameters[Constants.ZipCodeKey].Data,
                     Status = parser.Parameters[Constants.StatusKey].Data,
+                    MinAge = int.Parse(parser.Parameters[Constants.MinAgeKey].Data),
+                    ContentName = parser.Parameters[Constants.FileNameKey].Data,
+                    ContentType = parser.Parameters[Constants.ContentTypeKey].Data,
                     CampaignVisualResource = new CampaignMedia()
                     {
                         ContentLength = long.Parse(parser.Parameters[Constants.ContentLengthKey].Data),

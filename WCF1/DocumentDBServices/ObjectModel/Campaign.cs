@@ -41,6 +41,9 @@ namespace DocumentDBDataService
         public int participationCount { get; set; }
         public List<string> Events { get; set; }
         public string Status { get; set; }
+        public int MinAge { get; set; }
+        public string ContentName { get; set; }
+        public string ContentType { get; set; }
     }
 
     public class Campaign : CampaignBase

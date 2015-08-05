@@ -12,6 +12,7 @@ namespace DocumentDBDataService
         public const string HeadingKey = "Heading";
         public const string CategoryKey = "Category";
         public const string StatusKey = "Status";
+        public const string MinAgeKey = "MinAge";
         public const string MessageKey = "Message";
         public const string IsLocalKey = "IsLocal";
         public const string KeyWordsKey = "Keywords";
