@@ -1,6 +1,0 @@
-C:\GitHub\WCF1\WcfService1\bin\WcfService1.dll.config
-C:\GitHub\WCF1\WcfService1\bin\WcfService1.dll
-C:\GitHub\WCF1\WcfService1\bin\WcfService1.pdb
-C:\GitHub\WCF1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
-C:\GitHub\WCF1\WcfService1\obj\Debug\WcfService1.dll
-C:\GitHub\WCF1\WcfService1\obj\Debug\WcfService1.pdb
