@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,7 +30,7 @@ public class CampaignListAdapter extends ArrayAdapter<DBCampaign> {
         View rowView=inflater.inflate(R.layout.fragment_campaign_list, null, true);
 
         TextView txtTitle = (TextView) rowView.findViewById(R.id.item);
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
+        WebView webView = (WebView) rowView.findViewById(R.id.icon);
         TextView extratxt = (TextView) rowView.findViewById(R.id.textView1);
 
         DBCampaign camp = getItem(position);
@@ -39,9 +40,11 @@ public class CampaignListAdapter extends ArrayAdapter<DBCampaign> {
             if (heading != null)
                     txtTitle.setText(heading);
 
+            // Task XXXXX : We have to detect if the url is an Image or a video and extract the
+            //              bitmap for the thumbnail.
             String blobUrl = camp.getCampaignMediaResourceBlob();
             if (blobUrl != null)
-                imageView.setImageURI(Uri.parse(blobUrl));
+                webView.loadUrl(blobUrl);
 
             String msg = camp.getMessage();
             if (msg != null)
