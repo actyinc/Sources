@@ -20,7 +20,7 @@ namespace DocumentDBServiceTest
                 CreatedDate = DateTime.Now.ToString(),
                 DisplayName = "Hemanth",
                 DOB = DateTime.Parse("1/1/1984").ToString(),
-                Email = "hemanth@gmail.com",
+                Email = "hemhedge@gmail.com",
                 Password = "xzssddddd",
                 ZipCode = "98007",
                 Preferences = new UserPreferences() { InterestedLocales = new List<string>() { "US/98007", "US/98052", "IN/577005" } }
@@ -52,7 +52,7 @@ namespace DocumentDBServiceTest
                 CreatedDate = nowTime,
                 LastUpdatedDate = nowTime,
                 Description = "Lets meet discuss the plan of action",
-                OwnerId = "hemanth@gmail.com",
+                OwnerId = campaign.OwnerId,
                 ZipCode = "98007",
                 Time = "7/29/2015 3:30 PM",
                 Country = "US",

@@ -92,7 +92,6 @@ public class CampaignFragment extends Fragment implements AbsListView.OnItemClic
         }
 
 
-        // TODO: Change Adapter to display your content
         mAdapter = new CampaignListAdapter(getActivity(), new ArrayList<DBCampaign>());
     }
 

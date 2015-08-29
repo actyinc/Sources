@@ -5,8 +5,8 @@
 
     <GridView android:id="@android:id/list" android:layout_width="match_parent"
         android:layout_height="match_parent" android:numColumns="1" />
+    <!--
+        <TextView android:id="@android:id/empty" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:gravity="center" /> -->
 
-    <TextView android:id="@android:id/empty" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:gravity="center" />
-
-</FrameLayout>
+    </FrameLayout>
