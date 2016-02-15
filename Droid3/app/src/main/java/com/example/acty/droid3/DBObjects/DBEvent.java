@@ -1,4 +1,4 @@
-package com.example.acty.droid3;
+package com.example.acty.droid3.DBObjects;
 
 /**
  * Created by Hemanth on 8/23/2015.

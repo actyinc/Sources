@@ -12,10 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
+
+import com.example.acty.droid3.DBObjects.CampaignCategory;
+import com.example.acty.droid3.DBObjects.CampaignStatus;
+import com.example.acty.droid3.DBObjects.DBCampaign;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,9 +30,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -134,7 +135,7 @@ public class CampaignFragment extends Fragment implements AbsListView.OnItemClic
         if (null != mListener) {
             // Notify the active callbacks interface (the activity, if the
             // fragment is attached to one) that an item has been selected.
-            mListener.onCampaignFragmentInteraction(DummyContent.ITEMS.get(position).id);
+            mListener.onCampaignFragmentInteraction(mAdapter.getItem(position));
         }
     }
 
@@ -162,8 +163,8 @@ public class CampaignFragment extends Fragment implements AbsListView.OnItemClic
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnCampaignFragmentInteractionListener {
-        // TODO: Update argument type and name
-        public void onCampaignFragmentInteraction(String id);
+
+        public void onCampaignFragmentInteraction(DBCampaign campaign);
     }
 
     public class GetCampaignData extends AsyncTask<String, Void, List<DBCampaign>> {
@@ -255,6 +256,8 @@ public class CampaignFragment extends Fragment implements AbsListView.OnItemClic
             // These are the names of the JSON objects that need to be extracted.
             final String OWM_Category = "Category";
             final String OWM_CampaignMediaResourceBlob = "StoryMediaResourceBlob";
+            final String OWM_ContentName = "ContentName";
+            final String OWM_ContentType = "ContentType";
             final String OWM_CreatedDate = "CreatedDate";
             final String OWM_OwnerId = "OwnerId";
             final String OWM_Heading = "Heading";
@@ -296,6 +299,8 @@ public class CampaignFragment extends Fragment implements AbsListView.OnItemClic
                 camp.setLastUpdatedDate(campaignJSON.getString(OWM_LastUpdatedDate));
                 camp.setCountry(campaignJSON.getString(OWM_Country));
                 camp.setCampaignMediaResourceBlob(campaignJSON.getString(OWM_CampaignMediaResourceBlob));
+                camp.setContentName(campaignJSON.getString(OWM_ContentName));
+                camp.setContentType(campaignJSON.getString(OWM_ContentType));
                 camp.setCommentsCount(campaignJSON.getInt(OWM_CommentsCount));
                 camp.setParticipationCount(campaignJSON.getInt(OWM_participationCount));
 
@@ -345,13 +350,6 @@ public class CampaignFragment extends Fragment implements AbsListView.OnItemClic
                 for (DBCampaign c: campaigns)
                     mAdapter.add(c);
             }
-            //weekForecastAdapter.clear();
-            //weekForecastAdapter.addAll(campaigns);
-            /*for (int i = 0; i< strings.length; i++){
-                weekForecastAdapter.add(strings[i]);
-            }*/
-
-            // weekForecastAdapter.notifyDataSetChanged();
         }
     }
 }

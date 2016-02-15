@@ -12,4 +12,6 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_campaign_detail_view">CampaignDetailViewActivity</string>
+    <string name="Campaign_Icon_Description">Image representing the campaign if it is present</string>
 </resources>

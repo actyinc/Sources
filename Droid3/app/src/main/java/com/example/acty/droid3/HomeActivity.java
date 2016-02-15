@@ -18,7 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import junit.framework.Assert;
+import com.example.acty.droid3.DBObjects.DBCampaign;
 
 
 public class HomeActivity extends ActionBarActivity implements ActionBar.TabListener, CampaignFragment.OnCampaignFragmentInteractionListener,
@@ -123,7 +123,7 @@ public class HomeActivity extends ActionBarActivity implements ActionBar.TabList
 
     }
 
-    public void onCampaignFragmentInteraction(String id)
+    public void onCampaignFragmentInteraction(DBCampaign campaign)
     {
 
     }

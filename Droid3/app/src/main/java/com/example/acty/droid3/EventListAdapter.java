@@ -6,7 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.acty.droid3.DBObjects.DBEvent;
 
 import java.util.List;
 
@@ -27,7 +30,7 @@ public class EventListAdapter extends ArrayAdapter<DBEvent> {
         View rowView = inflater.inflate(R.layout.fragment_campaign_list, null, true);
 
         TextView txtTitle = (TextView) rowView.findViewById(R.id.item);
-        WebView webView = (WebView) rowView.findViewById(R.id.icon);
+        ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
         TextView extratxt = (TextView) rowView.findViewById(R.id.textView1);
 
         DBEvent evt = getItem(position);

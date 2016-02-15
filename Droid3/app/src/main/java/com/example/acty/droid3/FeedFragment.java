@@ -16,6 +16,10 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 
+import com.example.acty.droid3.DBObjects.CampaignCategory;
+import com.example.acty.droid3.DBObjects.CampaignStatus;
+import com.example.acty.droid3.DBObjects.DBCampaign;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -251,6 +255,8 @@ public class FeedFragment extends Fragment implements AbsListView.OnItemClickLis
             // These are the names of the JSON objects that need to be extracted.
             final String OWM_Category = "Category";
             final String OWM_CampaignMediaResourceBlob = "StoryMediaResourceBlob";
+            final String OWM_ContentName = "ContentName";
+            final String OWM_ContentType = "ContentType";
             final String OWM_CreatedDate = "CreatedDate";
             final String OWM_OwnerId = "OwnerId";
             final String OWM_Heading = "Heading";
@@ -292,6 +298,8 @@ public class FeedFragment extends Fragment implements AbsListView.OnItemClickLis
                 camp.setLastUpdatedDate(campaignJSON.getString(OWM_LastUpdatedDate));
                 camp.setCountry(campaignJSON.getString(OWM_Country));
                 camp.setCampaignMediaResourceBlob(campaignJSON.getString(OWM_CampaignMediaResourceBlob));
+                camp.setContentName(campaignJSON.getString(OWM_ContentName));
+                camp.setContentType(campaignJSON.getString(OWM_ContentType));
                 camp.setCommentsCount(campaignJSON.getInt(OWM_CommentsCount));
                 camp.setParticipationCount(campaignJSON.getInt(OWM_participationCount));
 
@@ -341,13 +349,6 @@ public class FeedFragment extends Fragment implements AbsListView.OnItemClickLis
                 for (DBCampaign c: campaigns)
                     mAdapter.add(c);
             }
-            //weekForecastAdapter.clear();
-            //weekForecastAdapter.addAll(campaigns);
-            /*for (int i = 0; i< strings.length; i++){
-                weekForecastAdapter.add(strings[i]);
-            }*/
-
-            // weekForecastAdapter.notifyDataSetChanged();
         }
     }
 }

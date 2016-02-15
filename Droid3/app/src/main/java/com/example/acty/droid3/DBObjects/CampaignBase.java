@@ -1,4 +1,4 @@
-package com.example.acty.droid3;
+package com.example.acty.droid3.DBObjects;
 
 public class CampaignBase {
     private String createdDate;

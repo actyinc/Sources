@@ -18,6 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CampaignDetailViewActivity"
+            android:label="@string/title_activity_campaign_detail_view"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.acty.droid3.HomeActivity" />
+        </activity>
     </application>
 
 </manifest>
